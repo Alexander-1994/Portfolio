@@ -1,0 +1,93 @@
+.resume {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include circle;  
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }  
+    }
+    &__subtitle {
+        margin-top: 6px;
+        text-align: center;
+    }
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__col {
+        &-title {
+            position: relative;
+            padding-left: 50px;
+            &::before {                                                 /* создание геометрических кружков как в макете */
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &::after {                                              /* создание геометрических линий как в макете */
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 50px);
+                    background-color: #000;
+                    position: absolute;
+                    top: -53px;
+                    left: 7px;
+                }
+            }
+        }
+    }
+    &__item {
+        &::before {                                                   /* создание геометрических линий как в макете */
+            content: '';
+            width: 42px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            top: 18px;
+            left: 8px;
+        }
+        &-head {
+            position: relative;
+            margin-top: 45px;
+            padding-left: 106px;
+        }
+        &-icon {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            @include circle;
+            img {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+        }
+        &-location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-body {
+            margin-top: 12px;
+            padding-left: 50px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
