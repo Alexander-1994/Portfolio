@@ -11,3 +11,12 @@
         border-radius: 100%;
     }
 }
+@mixin hover-social {
+    svg {
+        &:hover {
+            path {
+                fill: red;
+            }
+        }
+    }
+}

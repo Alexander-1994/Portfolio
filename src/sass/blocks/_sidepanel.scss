@@ -9,13 +9,7 @@
     justify-content: space-between;
     align-items: center;
     &__link {
-        svg {
-            &:hover {
-                path {
-                    fill: red;
-                }
-            }
-        }
+        @include hover-social;
     }
     &__divider {
         width: 2px;
