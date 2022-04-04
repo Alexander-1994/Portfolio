@@ -14,8 +14,8 @@
     margin: 0 auto;
 }
 
-@import 'blocks/promo';
 @import 'blocks/title';
+@import 'blocks/promo';
 @import 'blocks/button';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
@@ -26,3 +26,6 @@
 @import 'blocks/portfolio';
 @import 'blocks/price';
 @import 'blocks/contacts';
+@import 'blocks/policy';
+
+@import 'base/media';

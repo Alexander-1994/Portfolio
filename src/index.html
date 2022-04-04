@@ -128,7 +128,13 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about__wrapper">
-                <div class="about__photo"><img src="img/main_photo.jpg" alt="photo"></div>
+                <div class="about__photo">
+                    <picture>   <!-- адаптация изоюражения. Для моб. версии будет загружаться фото поменьше -->
+                        <source media="(max-width: 575px)" srcset="img/main_photo-min.jpg">
+                        <source media="(min-width: 576px)" srcset="img/main_photo.jpg">
+                        <img src="img/main_photo.jpg" alt="photo">
+                    </picture>
+                </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">Про меня</h2>
                     <div class="title about__subtitle">Меня зовут Александра</div>
@@ -379,7 +385,6 @@
                 <a href="#" class="portfolio__item portfolio__item_mac"><img src="img/works/mac.jpg" alt="mac"></a>
             </div>
         </div>
-
     </section>
 
     <section class="price" id="price">
@@ -463,14 +468,18 @@
                             <textarea name="text" id="text"></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
-                        <div>     <!-- кнопку обернул в div, чтобы она не растягивалась на всю колонку -->
+                        <div class="contacts__triggers">     
                             <button class="btn contacts__btn">Отправить сообщение</button>  
+                            <div class="contacts__policy">
+                                <input required type="checkbox">
+                                <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>    
         </div>
-    </section>
+    </section> 
 
     <script src="js/script.js"></script>
 </body>
